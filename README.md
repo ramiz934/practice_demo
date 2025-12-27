@@ -6,7 +6,7 @@ class Main {
         String str= "java programming is a good programming java";
    Map.Entry<String,Long> s= Arrays.stream(str.split(""))
 .collect(Collectors.groupingBy(Function.identity(),LinkedHashMap::new,Collectors.counting()))
-        .entrySet().stream().filter(x->x.getValue()>1).findFirst().get();
+        .entrySet().stream().filter(x->x.getValue()>1).findFirst().get();//modified
         
         System.out.println(s);
     }
